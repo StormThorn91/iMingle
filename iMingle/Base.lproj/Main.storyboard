@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,132 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iMingle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="erH-mr-Esp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iMingle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fk4-92-0I3">
+                                <rect key="frame" x="92.5" y="64" width="229" height="79"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="65"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A great way to socialize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJh-Ay-68R">
+                                <rect key="frame" x="87.5" y="147" width="239" height="25"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slD-pF-h0e">
+                                <rect key="frame" x="0.0" y="312" width="414" height="295"/>
+                                <subviews>
+                                    <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k13-b8-BTb" customClass="EHTextField" customModule="iMingle" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="10" width="374" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Gpe-Sy-cg4"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ie2-iW-Vn9" customClass="EHTextField" customModule="iMingle" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="85" width="374" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="2G8-VX-T02"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVN-C6-dfM" customClass="EHButton" customModule="iMingle" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="175" width="374" height="60"/>
+                                        <color key="backgroundColor" red="0.10196078431372549" green="0.73725490196078436" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="UH1-uH-3DI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh2-xq-2hT">
+                                        <rect key="frame" x="84.5" y="255" width="245" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="7o7-cP-pcN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Don't have an account? Sign up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wVN-C6-dfM" secondAttribute="trailing" constant="20" id="GYf-Js-TAx"/>
+                                    <constraint firstItem="k13-b8-BTb" firstAttribute="leading" secondItem="slD-pF-h0e" secondAttribute="leading" constant="20" id="RSz-oq-rTT"/>
+                                    <constraint firstItem="wVN-C6-dfM" firstAttribute="leading" secondItem="slD-pF-h0e" secondAttribute="leading" constant="20" id="U4i-Dk-mX7"/>
+                                    <constraint firstItem="ie2-iW-Vn9" firstAttribute="leading" secondItem="slD-pF-h0e" secondAttribute="leading" constant="20" id="V9G-zd-xHW"/>
+                                    <constraint firstItem="wVN-C6-dfM" firstAttribute="top" secondItem="ie2-iW-Vn9" secondAttribute="bottom" constant="30" id="XSy-Gl-iWX"/>
+                                    <constraint firstItem="k13-b8-BTb" firstAttribute="top" secondItem="slD-pF-h0e" secondAttribute="top" constant="10" id="aSj-u5-gQe"/>
+                                    <constraint firstAttribute="trailing" secondItem="k13-b8-BTb" secondAttribute="trailing" constant="20" id="aaP-pD-hQF"/>
+                                    <constraint firstItem="Rh2-xq-2hT" firstAttribute="centerX" secondItem="slD-pF-h0e" secondAttribute="centerX" id="bvJ-Bq-4I1"/>
+                                    <constraint firstAttribute="trailing" secondItem="ie2-iW-Vn9" secondAttribute="trailing" constant="20" id="c8z-fv-8D4"/>
+                                    <constraint firstAttribute="height" constant="295" id="trK-OQ-PcI"/>
+                                    <constraint firstItem="Rh2-xq-2hT" firstAttribute="top" secondItem="wVN-C6-dfM" secondAttribute="bottom" constant="20" id="vFl-70-Xd2"/>
+                                    <constraint firstItem="ie2-iW-Vn9" firstAttribute="top" secondItem="k13-b8-BTb" secondAttribute="bottom" constant="15" id="y3P-lp-iWg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="erH-mr-Esp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="34U-dI-UhC"/>
+                            <constraint firstItem="mJh-Ay-68R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4bY-sm-9ua"/>
+                            <constraint firstItem="mJh-Ay-68R" firstAttribute="top" secondItem="Fk4-92-0I3" secondAttribute="bottom" constant="4" id="6yN-Xp-noX"/>
+                            <constraint firstItem="slD-pF-h0e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JGB-id-P7y"/>
+                            <constraint firstItem="slD-pF-h0e" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QFu-tF-kOF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="erH-mr-Esp" secondAttribute="trailing" id="UFi-JJ-fcg"/>
+                            <constraint firstItem="erH-mr-Esp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XzC-7F-Rfy"/>
+                            <constraint firstAttribute="bottom" secondItem="erH-mr-Esp" secondAttribute="bottom" id="mwi-47-7wx"/>
+                            <constraint firstItem="Fk4-92-0I3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sa9-3O-r2e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="slD-pF-h0e" secondAttribute="bottom" constant="255" id="wRp-Ok-aZO"/>
+                            <constraint firstItem="Fk4-92-0I3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xEc-n2-rgV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="26.785714285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="3456" height="5184"/>
+    </resources>
 </document>

@@ -12,6 +12,9 @@
 		D154CCC4216989DA00E74E34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D154CCC2216989DA00E74E34 /* Main.storyboard */; };
 		D154CCC6216989DC00E74E34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D154CCC5216989DC00E74E34 /* Assets.xcassets */; };
 		D154CCC9216989DC00E74E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D154CCC7216989DC00E74E34 /* LaunchScreen.storyboard */; };
+		D1C0E1452169A9BA0097CCDD /* EHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0E1442169A9BA0097CCDD /* EHTextField.swift */; };
+		D1C0E1472169AF340097CCDD /* EHView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0E1462169AF340097CCDD /* EHView.swift */; };
+		D1C0E1492169B9280097CCDD /* EHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0E1482169B9280097CCDD /* EHButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		D154CCC5216989DC00E74E34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D154CCC8216989DC00E74E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D154CCCA216989DC00E74E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1C0E1442169A9BA0097CCDD /* EHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHTextField.swift; sourceTree = "<group>"; };
+		D1C0E1462169AF340097CCDD /* EHView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHView.swift; sourceTree = "<group>"; };
+		D1C0E1482169B9280097CCDD /* EHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				D154CCC5216989DC00E74E34 /* Assets.xcassets */,
 				D154CCC7216989DC00E74E34 /* LaunchScreen.storyboard */,
 				D154CCCA216989DC00E74E34 /* Info.plist */,
+				D1C0E1442169A9BA0097CCDD /* EHTextField.swift */,
+				D1C0E1462169AF340097CCDD /* EHView.swift */,
+				D1C0E1482169B9280097CCDD /* EHButton.swift */,
 			);
 			path = iMingle;
 			sourceTree = "<group>";
@@ -136,7 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D154CCC1216989DA00E74E34 /* ViewController.swift in Sources */,
+				D1C0E1492169B9280097CCDD /* EHButton.swift in Sources */,
+				D1C0E1452169A9BA0097CCDD /* EHTextField.swift in Sources */,
 				D154CCBF216989DA00E74E34 /* AppDelegate.swift in Sources */,
+				D1C0E1472169AF340097CCDD /* EHView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +295,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TD4596KEK9;
 				INFOPLIST_FILE = iMingle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +314,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TD4596KEK9;
 				INFOPLIST_FILE = iMingle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
