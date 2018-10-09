@@ -15,6 +15,7 @@
 		D1C0E1452169A9BA0097CCDD /* EHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0E1442169A9BA0097CCDD /* EHTextField.swift */; };
 		D1C0E1472169AF340097CCDD /* EHView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0E1462169AF340097CCDD /* EHView.swift */; };
 		D1C0E1492169B9280097CCDD /* EHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0E1482169B9280097CCDD /* EHButton.swift */; };
+		D1C535F4216C43CE00393DFC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C535F3216C43CE00393DFC /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D1C0E1442169A9BA0097CCDD /* EHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHTextField.swift; sourceTree = "<group>"; };
 		D1C0E1462169AF340097CCDD /* EHView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHView.swift; sourceTree = "<group>"; };
 		D1C0E1482169B9280097CCDD /* EHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHButton.swift; sourceTree = "<group>"; };
+		D1C535F3216C43CE00393DFC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				D1C0E1442169A9BA0097CCDD /* EHTextField.swift */,
 				D1C0E1462169AF340097CCDD /* EHView.swift */,
 				D1C0E1482169B9280097CCDD /* EHButton.swift */,
+				D1C535F3216C43CE00393DFC /* LogInViewController.swift */,
 			);
 			path = iMingle;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				D154CCC1216989DA00E74E34 /* ViewController.swift in Sources */,
 				D1C0E1492169B9280097CCDD /* EHButton.swift in Sources */,
+				D1C535F4216C43CE00393DFC /* LogInViewController.swift in Sources */,
 				D1C0E1452169A9BA0097CCDD /* EHTextField.swift in Sources */,
 				D154CCBF216989DA00E74E34 /* AppDelegate.swift in Sources */,
 				D1C0E1472169AF340097CCDD /* EHView.swift in Sources */,
