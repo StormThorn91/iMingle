@@ -1,0 +1,6 @@
+framework module Pods_iMingle {
+  umbrella header "Pods-iMingle-umbrella.h"
+
+  export *
+  module * { export * }
+}
