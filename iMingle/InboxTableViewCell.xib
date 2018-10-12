@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="InboxTableViewCell" customModule="iMingle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder image" translatesAutoresizingMaskIntoConstraints="NO" id="PdK-uJ-1UB" customClass="EHImageView" customModule="iMingle" customModuleProvider="target">
+                        <rect key="frame" x="20" y="25" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="ro7-Xc-Els"/>
+                            <constraint firstAttribute="width" constant="70" id="yJ8-iD-Qw0"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="35"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Justine Paul Vitan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh6-dk-f4b">
+                        <rect key="frame" x="102" y="36" width="159" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="SWq-I1-c1E"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erQ-Ik-62v">
+                        <rect key="frame" x="102" y="60" width="292" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="4fK-Le-xYg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.58431372549019611" green="0.6470588235294118" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dh6-dk-f4b" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-12" id="423-6Y-gVV"/>
+                    <constraint firstItem="erQ-Ik-62v" firstAttribute="leading" secondItem="PdK-uJ-1UB" secondAttribute="trailing" constant="12" id="FxC-kU-mMy"/>
+                    <constraint firstItem="PdK-uJ-1UB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="H7u-M3-bqM"/>
+                    <constraint firstItem="dh6-dk-f4b" firstAttribute="leading" secondItem="PdK-uJ-1UB" secondAttribute="trailing" constant="12" id="XMl-WN-5Zy"/>
+                    <constraint firstItem="erQ-Ik-62v" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="12" id="gjd-Ta-617"/>
+                    <constraint firstItem="PdK-uJ-1UB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jtg-0a-nVp"/>
+                    <constraint firstItem="erQ-Ik-62v" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="rbd-cT-JDb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration" identifier="InboxTableViewCell"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="212.80000000000001" y="186.20689655172416"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="placeholder image" width="720" height="720"/>
+    </resources>
+</document>

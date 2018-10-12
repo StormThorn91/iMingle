@@ -18,6 +18,13 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToInboxViewController"{
+            let destinationViewController = segue.destination as! InboxViewController
+            destinationViewController.previousViewController = self
+        }
+    }
+    
     @IBAction func buttonLogInClicked(_ sender: Any) {
         guard let email = textFieldUsername.text else{
             showLogInFailedAlert(details: "Please check your email for errors.")
@@ -33,7 +40,7 @@ class LogInViewController: UIViewController {
                 // If error is detected.
                 self.showLogInFailedAlert(details: (error?.localizedDescription)!)
             }else{
-                print("Log In Success!")
+                self.performSegue(withIdentifier: "segueGoToTabBarController", sender: self)
             }
         })
     }

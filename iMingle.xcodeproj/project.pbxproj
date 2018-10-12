@@ -14,6 +14,10 @@
 		D154CCC6216989DC00E74E34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D154CCC5216989DC00E74E34 /* Assets.xcassets */; };
 		D154CCC9216989DC00E74E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D154CCC7216989DC00E74E34 /* LaunchScreen.storyboard */; };
 		D1B208EF216C7AB20042E709 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B208EE216C7AB20042E709 /* SignUpViewController.swift */; };
+		D1B7A8DA216F8A5D00BFDED0 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B7A8D9216F8A5D00BFDED0 /* InboxViewController.swift */; };
+		D1B7A8DD216F9DA000BFDED0 /* InboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B7A8DB216F9DA000BFDED0 /* InboxTableViewCell.swift */; };
+		D1B7A8DE216F9DA000BFDED0 /* InboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B7A8DC216F9DA000BFDED0 /* InboxTableViewCell.xib */; };
+		D1B7A8E0216FA70600BFDED0 /* EHImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B7A8DF216FA70600BFDED0 /* EHImageView.swift */; };
 		D1C0E1452169A9BA0097CCDD /* EHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0E1442169A9BA0097CCDD /* EHTextField.swift */; };
 		D1C0E1472169AF340097CCDD /* EHView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0E1462169AF340097CCDD /* EHView.swift */; };
 		D1C0E1492169B9280097CCDD /* EHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0E1482169B9280097CCDD /* EHButton.swift */; };
@@ -34,6 +38,10 @@
 		D154CCC8216989DC00E74E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D154CCCA216989DC00E74E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1B208EE216C7AB20042E709 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D1B7A8D9216F8A5D00BFDED0 /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
+		D1B7A8DB216F9DA000BFDED0 /* InboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxTableViewCell.swift; sourceTree = "<group>"; };
+		D1B7A8DC216F9DA000BFDED0 /* InboxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InboxTableViewCell.xib; sourceTree = "<group>"; };
+		D1B7A8DF216FA70600BFDED0 /* EHImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHImageView.swift; sourceTree = "<group>"; };
 		D1C0E1442169A9BA0097CCDD /* EHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHTextField.swift; sourceTree = "<group>"; };
 		D1C0E1462169AF340097CCDD /* EHView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHView.swift; sourceTree = "<group>"; };
 		D1C0E1482169B9280097CCDD /* EHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHButton.swift; sourceTree = "<group>"; };
@@ -85,6 +93,10 @@
 				D1C0E1482169B9280097CCDD /* EHButton.swift */,
 				D1C535F3216C43CE00393DFC /* LogInViewController.swift */,
 				D1B208EE216C7AB20042E709 /* SignUpViewController.swift */,
+				D1B7A8D9216F8A5D00BFDED0 /* InboxViewController.swift */,
+				D1B7A8DB216F9DA000BFDED0 /* InboxTableViewCell.swift */,
+				D1B7A8DC216F9DA000BFDED0 /* InboxTableViewCell.xib */,
+				D1B7A8DF216FA70600BFDED0 /* EHImageView.swift */,
 			);
 			path = iMingle;
 			sourceTree = "<group>";
@@ -168,6 +180,7 @@
 			files = (
 				D154CCC9216989DC00E74E34 /* LaunchScreen.storyboard in Resources */,
 				D1004BEC216CC62D0058C162 /* GoogleService-Info.plist in Resources */,
+				D1B7A8DE216F9DA000BFDED0 /* InboxTableViewCell.xib in Resources */,
 				D154CCC6216989DC00E74E34 /* Assets.xcassets in Resources */,
 				D154CCC4216989DA00E74E34 /* Main.storyboard in Resources */,
 			);
@@ -238,7 +251,10 @@
 				D154CCC1216989DA00E74E34 /* ViewController.swift in Sources */,
 				D1B208EF216C7AB20042E709 /* SignUpViewController.swift in Sources */,
 				D1C0E1492169B9280097CCDD /* EHButton.swift in Sources */,
+				D1B7A8E0216FA70600BFDED0 /* EHImageView.swift in Sources */,
+				D1B7A8DA216F8A5D00BFDED0 /* InboxViewController.swift in Sources */,
 				D1C535F4216C43CE00393DFC /* LogInViewController.swift in Sources */,
+				D1B7A8DD216F9DA000BFDED0 /* InboxTableViewCell.swift in Sources */,
 				D1C0E1452169A9BA0097CCDD /* EHTextField.swift in Sources */,
 				D154CCBF216989DA00E74E34 /* AppDelegate.swift in Sources */,
 				D1C0E1472169AF340097CCDD /* EHView.swift in Sources */,
