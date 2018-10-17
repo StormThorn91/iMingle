@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D1004BEC216CC62D0058C162 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1004BEB216CC62D0058C162 /* GoogleService-Info.plist */; };
+		D10F68F62176354F00F9E572 /* SearchForPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F68F52176354F00F9E572 /* SearchForPeopleViewController.swift */; };
+		D10F68F921763CD600F9E572 /* SearchForPeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F68F721763CD600F9E572 /* SearchForPeopleTableViewCell.swift */; };
+		D10F68FA21763CD600F9E572 /* SearchForPeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D10F68F821763CD600F9E572 /* SearchForPeopleTableViewCell.xib */; };
+		D10F68FC2176402900F9E572 /* UserSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F68FB2176402900F9E572 /* UserSearchResult.swift */; };
 		D154CCBF216989DA00E74E34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D154CCBE216989DA00E74E34 /* AppDelegate.swift */; };
 		D154CCC1216989DA00E74E34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D154CCC0216989DA00E74E34 /* ViewController.swift */; };
 		D154CCC4216989DA00E74E34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D154CCC2216989DA00E74E34 /* Main.storyboard */; };
@@ -30,6 +34,10 @@
 		52CE3C224B0888398ACB623A /* Pods-iMingle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMingle.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMingle/Pods-iMingle.release.xcconfig"; sourceTree = "<group>"; };
 		ABB76CE43CBC65049C411769 /* Pods-iMingle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMingle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMingle/Pods-iMingle.debug.xcconfig"; sourceTree = "<group>"; };
 		D1004BEB216CC62D0058C162 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D10F68F52176354F00F9E572 /* SearchForPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForPeopleViewController.swift; sourceTree = "<group>"; };
+		D10F68F721763CD600F9E572 /* SearchForPeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForPeopleTableViewCell.swift; sourceTree = "<group>"; };
+		D10F68F821763CD600F9E572 /* SearchForPeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchForPeopleTableViewCell.xib; sourceTree = "<group>"; };
+		D10F68FB2176402900F9E572 /* UserSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchResult.swift; sourceTree = "<group>"; };
 		D154CCBB216989DA00E74E34 /* iMingle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMingle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D154CCBE216989DA00E74E34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D154CCC0216989DA00E74E34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +105,10 @@
 				D1B7A8DB216F9DA000BFDED0 /* InboxTableViewCell.swift */,
 				D1B7A8DC216F9DA000BFDED0 /* InboxTableViewCell.xib */,
 				D1B7A8DF216FA70600BFDED0 /* EHImageView.swift */,
+				D10F68F52176354F00F9E572 /* SearchForPeopleViewController.swift */,
+				D10F68F721763CD600F9E572 /* SearchForPeopleTableViewCell.swift */,
+				D10F68F821763CD600F9E572 /* SearchForPeopleTableViewCell.xib */,
+				D10F68FB2176402900F9E572 /* UserSearchResult.swift */,
 			);
 			path = iMingle;
 			sourceTree = "<group>";
@@ -178,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D10F68FA21763CD600F9E572 /* SearchForPeopleTableViewCell.xib in Resources */,
 				D154CCC9216989DC00E74E34 /* LaunchScreen.storyboard in Resources */,
 				D1004BEC216CC62D0058C162 /* GoogleService-Info.plist in Resources */,
 				D1B7A8DE216F9DA000BFDED0 /* InboxTableViewCell.xib in Resources */,
@@ -250,13 +263,16 @@
 			files = (
 				D154CCC1216989DA00E74E34 /* ViewController.swift in Sources */,
 				D1B208EF216C7AB20042E709 /* SignUpViewController.swift in Sources */,
+				D10F68FC2176402900F9E572 /* UserSearchResult.swift in Sources */,
 				D1C0E1492169B9280097CCDD /* EHButton.swift in Sources */,
 				D1B7A8E0216FA70600BFDED0 /* EHImageView.swift in Sources */,
 				D1B7A8DA216F8A5D00BFDED0 /* InboxViewController.swift in Sources */,
 				D1C535F4216C43CE00393DFC /* LogInViewController.swift in Sources */,
 				D1B7A8DD216F9DA000BFDED0 /* InboxTableViewCell.swift in Sources */,
 				D1C0E1452169A9BA0097CCDD /* EHTextField.swift in Sources */,
+				D10F68F62176354F00F9E572 /* SearchForPeopleViewController.swift in Sources */,
 				D154CCBF216989DA00E74E34 /* AppDelegate.swift in Sources */,
+				D10F68F921763CD600F9E572 /* SearchForPeopleTableViewCell.swift in Sources */,
 				D1C0E1472169AF340097CCDD /* EHView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

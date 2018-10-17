@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -38,7 +39,7 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func buttonComposeMessageClicked(_ sender: Any) {
-        
+        performSegue(withIdentifier: "segueGoToSearchForPeople", sender: self)
     }
     
     @IBAction func buttonSettingsClicked(_ sender: Any) {
