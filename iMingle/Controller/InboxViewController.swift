@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -25,8 +24,12 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableViewMessage.register(UINib(nibName: "InboxTableViewCell", bundle: nil), forCellReuseIdentifier: "InboxTableViewCell")
     }
     
-    func disposePreviousViewController(){
-        previousViewController?.dismiss(animated: false, completion: nil)
+    @IBAction func buttonComposeMessageClicked(_ sender: Any) {
+        performSegue(withIdentifier: "segueGoToSearchForPeople", sender: self)
+    }
+    
+    @IBAction func buttonSettingsClicked(_ sender: Any) {
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,12 +41,8 @@ class InboxViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    @IBAction func buttonComposeMessageClicked(_ sender: Any) {
-        performSegue(withIdentifier: "segueGoToSearchForPeople", sender: self)
-    }
-    
-    @IBAction func buttonSettingsClicked(_ sender: Any) {
-        
+    func disposePreviousViewController(){
+        previousViewController?.dismiss(animated: false, completion: nil)
     }
     
 }

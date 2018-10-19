@@ -34,6 +34,33 @@ class SearchForPeopleViewController: UIViewController, UITableViewDelegate, UITa
         self.dismiss(animated: true, completion: nil)
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return userSearchResultArray.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let searchForPeopleViewControllerCell = tableViewPeople.dequeueReusableCell(withIdentifier: "SearchForPeopleTableViewCell", for: indexPath) as! SearchForPeopleTableViewCell
+        searchForPeopleViewControllerCell.setContent(name: userSearchResultArray[indexPath.row].name, extraInformation: "\(userSearchResultArray[indexPath.row].location) • \(userSearchResultArray[indexPath.row].sex) • \(userSearchResultArray[indexPath.row].age) years old")
+        return searchForPeopleViewControllerCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let relationshipDBReference = Database.database().reference().child("relationship")
+        
+        guard let userId = Auth.auth().currentUser?.uid else{
+            return
+        }
+        
+        relationshipDBReference.child(userId).child("grouped conversation").observeSingleEvent(of: .childAdded) { (snapshot) in
+            if snapshot.hasChild(self.userSearchResultArray[indexPath.row].uid) {
+                // If user has a conversation before with this person.
+                
+            }else{
+                
+            }
+        }
+    }
+    
     @objc func textFieldWillShow(notification: NSNotification){
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
             tableViewPeopleBottomConstraint.constant = keyboardSize.height
@@ -48,45 +75,37 @@ class SearchForPeopleViewController: UIViewController, UITableViewDelegate, UITa
         loadSearchResults()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userSearchResultArray.count;
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let searchForPeopleViewControllerCell = tableViewPeople.dequeueReusableCell(withIdentifier: "SearchForPeopleTableViewCell", for: indexPath) as! SearchForPeopleTableViewCell
-        searchForPeopleViewControllerCell.setContent(name: userSearchResultArray[indexPath.row].name, extraInformation: "\(userSearchResultArray[indexPath.row].location) • \(userSearchResultArray[indexPath.row].sex) • \(userSearchResultArray[indexPath.row].age) years old")
-        return searchForPeopleViewControllerCell
-    }
-    
     func loadSearchResults(){
         userSearchResultArray.removeAll()
         self.tableViewPeople.reloadData()
+        
+        let userDBReference = Database.database().reference().child("user")
+        userDBReference.removeAllObservers()
         
         guard let textFieldSearchValue = textFieldSearch.text, !textFieldSearchValue.isEmpty else{
             return
         }
         
-        let userDBReference = Database.database().reference().child("User").queryOrdered(byChild: "Name").queryStarting(atValue: textFieldSearchValue).queryEnding(atValue: "\(textFieldSearchValue)\\uf8ff").observe(.childAdded) { (snapshot) in
-            print(snapshot.value)
+        userDBReference.queryOrdered(byChild: "name").queryStarting(atValue: textFieldSearchValue).queryEnding(atValue: "\(textFieldSearchValue)\u{f8ff}").observe(
+        .childAdded) { (snapshot) in
             guard let userDataDictionary = snapshot.value as? [String: Any] else{
                 return
             }
-
-            guard let name = userDataDictionary["Name"] as? String else{
+            guard let name = userDataDictionary["name"] as? String else{
                 return
             }
-            guard let location = userDataDictionary["Location"] as? String else{
+            guard let location = userDataDictionary["location"] as? String else{
                 return
             }
-            guard let sex = userDataDictionary["Sex"] as? String else{
+            guard let sex = userDataDictionary["sex"] as? String else{
                 return
             }
-            guard let dateOfBirth = userDataDictionary["Date of Birth"] as? String else{
+            guard let dateOfBirth = userDataDictionary["date of birth"] as? String else{
                 return
             }
-            self.userSearchResultArray.append(UserSearchResult(name: name, location: location, sex: sex, dateOfBirth: dateOfBirth))
+            
+            self.userSearchResultArray.append(UserSearchResult(uid: snapshot.key, name: name, location: location, sex: sex, dateOfBirth: dateOfBirth))
             self.tableViewPeople.reloadData()
         }
-        
     }
 }

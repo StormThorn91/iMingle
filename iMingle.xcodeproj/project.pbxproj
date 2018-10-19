@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D1004BEC216CC62D0058C162 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1004BEB216CC62D0058C162 /* GoogleService-Info.plist */; };
+		D1051FBA2179ECF600D76BB4 /* FirebaseDatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1051FB92179ECF600D76BB4 /* FirebaseDatabaseController.swift */; };
 		D10F68F62176354F00F9E572 /* SearchForPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F68F52176354F00F9E572 /* SearchForPeopleViewController.swift */; };
 		D10F68F921763CD600F9E572 /* SearchForPeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F68F721763CD600F9E572 /* SearchForPeopleTableViewCell.swift */; };
 		D10F68FA21763CD600F9E572 /* SearchForPeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D10F68F821763CD600F9E572 /* SearchForPeopleTableViewCell.xib */; };
@@ -34,6 +35,7 @@
 		52CE3C224B0888398ACB623A /* Pods-iMingle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMingle.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMingle/Pods-iMingle.release.xcconfig"; sourceTree = "<group>"; };
 		ABB76CE43CBC65049C411769 /* Pods-iMingle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMingle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMingle/Pods-iMingle.debug.xcconfig"; sourceTree = "<group>"; };
 		D1004BEB216CC62D0058C162 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D1051FB92179ECF600D76BB4 /* FirebaseDatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseController.swift; sourceTree = "<group>"; };
 		D10F68F52176354F00F9E572 /* SearchForPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForPeopleViewController.swift; sourceTree = "<group>"; };
 		D10F68F721763CD600F9E572 /* SearchForPeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForPeopleTableViewCell.swift; sourceTree = "<group>"; };
 		D10F68F821763CD600F9E572 /* SearchForPeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchForPeopleTableViewCell.xib; sourceTree = "<group>"; };
@@ -89,28 +91,61 @@
 		D154CCBD216989DA00E74E34 /* iMingle */ = {
 			isa = PBXGroup;
 			children = (
-				D1004BEB216CC62D0058C162 /* GoogleService-Info.plist */,
+				D1C8625B217A3DB1003BECF1 /* Controller */,
+				D1C8625A217A3D93003BECF1 /* View */,
+				D1C86259217A3D78003BECF1 /* Model */,
+				D1C86258217A3D2E003BECF1 /* EH Classes */,
 				D154CCBE216989DA00E74E34 /* AppDelegate.swift */,
-				D154CCC0216989DA00E74E34 /* ViewController.swift */,
-				D154CCC2216989DA00E74E34 /* Main.storyboard */,
-				D154CCC5216989DC00E74E34 /* Assets.xcassets */,
-				D154CCC7216989DC00E74E34 /* LaunchScreen.storyboard */,
 				D154CCCA216989DC00E74E34 /* Info.plist */,
+				D1004BEB216CC62D0058C162 /* GoogleService-Info.plist */,
+				D154CCC5216989DC00E74E34 /* Assets.xcassets */,
+			);
+			path = iMingle;
+			sourceTree = "<group>";
+		};
+		D1C86258217A3D2E003BECF1 /* EH Classes */ = {
+			isa = PBXGroup;
+			children = (
 				D1C0E1442169A9BA0097CCDD /* EHTextField.swift */,
 				D1C0E1462169AF340097CCDD /* EHView.swift */,
 				D1C0E1482169B9280097CCDD /* EHButton.swift */,
+				D1B7A8DF216FA70600BFDED0 /* EHImageView.swift */,
+			);
+			path = "EH Classes";
+			sourceTree = "<group>";
+		};
+		D1C86259217A3D78003BECF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1051FB92179ECF600D76BB4 /* FirebaseDatabaseController.swift */,
+				D10F68FB2176402900F9E572 /* UserSearchResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1C8625A217A3D93003BECF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D154CCC7216989DC00E74E34 /* LaunchScreen.storyboard */,
+				D154CCC2216989DA00E74E34 /* Main.storyboard */,
+				D1B7A8DC216F9DA000BFDED0 /* InboxTableViewCell.xib */,
+				D10F68F821763CD600F9E572 /* SearchForPeopleTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1C8625B217A3DB1003BECF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D154CCC0216989DA00E74E34 /* ViewController.swift */,
 				D1C535F3216C43CE00393DFC /* LogInViewController.swift */,
 				D1B208EE216C7AB20042E709 /* SignUpViewController.swift */,
 				D1B7A8D9216F8A5D00BFDED0 /* InboxViewController.swift */,
-				D1B7A8DB216F9DA000BFDED0 /* InboxTableViewCell.swift */,
-				D1B7A8DC216F9DA000BFDED0 /* InboxTableViewCell.xib */,
-				D1B7A8DF216FA70600BFDED0 /* EHImageView.swift */,
 				D10F68F52176354F00F9E572 /* SearchForPeopleViewController.swift */,
+				D1B7A8DB216F9DA000BFDED0 /* InboxTableViewCell.swift */,
 				D10F68F721763CD600F9E572 /* SearchForPeopleTableViewCell.swift */,
-				D10F68F821763CD600F9E572 /* SearchForPeopleTableViewCell.xib */,
-				D10F68FB2176402900F9E572 /* UserSearchResult.swift */,
 			);
-			path = iMingle;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		ED1251227A8C29AB30B5F5C0 /* Frameworks */ = {
@@ -267,6 +302,7 @@
 				D1C0E1492169B9280097CCDD /* EHButton.swift in Sources */,
 				D1B7A8E0216FA70600BFDED0 /* EHImageView.swift in Sources */,
 				D1B7A8DA216F8A5D00BFDED0 /* InboxViewController.swift in Sources */,
+				D1051FBA2179ECF600D76BB4 /* FirebaseDatabaseController.swift in Sources */,
 				D1C535F4216C43CE00393DFC /* LogInViewController.swift in Sources */,
 				D1B7A8DD216F9DA000BFDED0 /* InboxTableViewCell.swift in Sources */,
 				D1C0E1452169A9BA0097CCDD /* EHTextField.swift in Sources */,

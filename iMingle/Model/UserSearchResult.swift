@@ -10,13 +10,16 @@ import Foundation
 
 class UserSearchResult{
     
+    var uid: String
+    
     var name: String
     var location: String
     var sex: String
     var dateOfBirth: String
     var age: Int
     
-    init(name: String, location: String, sex: String, dateOfBirth: String){
+    init(uid: String, name: String, location: String, sex: String, dateOfBirth: String){
+        self.uid = uid
         self.name = name
         self.location = location
         self.sex = sex
