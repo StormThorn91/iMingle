@@ -503,6 +503,21 @@
             </objects>
             <point key="canvasLocation" x="-336" y="733"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="vMv-LM-JnT">
+            <objects>
+                <viewController id="I5w-Xb-Ozs" customClass="SettingsViewController" customModule="iMingle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7NU-rE-2a1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="e8c-51-4KS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jic-B9-Ffr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-393" y="-1334"/>
+        </scene>
         <!--Inbox-->
         <scene sceneID="wez-UX-ZZp">
             <objects>
@@ -520,6 +535,7 @@
                                 <state key="normal" image="settings"/>
                                 <connections>
                                     <action selector="buttonSettingsClicked:" destination="217-a1-TKW" eventType="touchUpInside" id="FSW-yZ-mWr"/>
+                                    <segue destination="I5w-Xb-Ozs" kind="show" identifier="segueGoToSettings" id="Y34-fY-IjH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hf3-SV-511">
